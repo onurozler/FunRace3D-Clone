@@ -27,6 +27,7 @@
                 <e p="CharacterBase.cs" t="Include" />
               </e>
               <e p="Controllers" t="Include">
+                <e p="CharacterAnimatorController.cs" t="Include" />
                 <e p="CharacterInputController.cs" t="Include" />
                 <e p="CharacterMovementController.cs" t="Include" />
                 <e p="CharacterPhysicsController.cs" t="Include" />
