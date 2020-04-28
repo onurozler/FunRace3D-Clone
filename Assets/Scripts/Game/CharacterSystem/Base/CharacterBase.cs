@@ -2,6 +2,7 @@
 using Game.CharacterSystem.Controllers;
 using Game.CharacterSystem.Managers;
 using UnityEngine;
+using Utils;
 
 namespace Game.CharacterSystem.Base
 {
@@ -23,7 +24,6 @@ namespace Game.CharacterSystem.Base
         
         #endregion
         
-
         public void Initialize()
         {
             var ragdollJoints = GetComponentsInChildren<Rigidbody>().Where(x => x.gameObject != gameObject).ToList();
@@ -37,10 +37,9 @@ namespace Game.CharacterSystem.Base
             _characterInputController = gameObject.AddComponent<CharacterInputController>();
             _characterMovementController = gameObject.AddComponent<CharacterMovementController>();
 
+            _characterInputController.Initialize();
             _characterMovementController.Initialize(transform, 5f);
             _characterPhysicsController.Initialize(_characterPhysicsManager);
-            
-            _characterPhysicsController.RagdollActivition(false);
             
             // Event Subscriptions
             _characterInputController.OnTapPressing += ()=>
@@ -53,6 +52,25 @@ namespace Game.CharacterSystem.Base
             {
                 _characterAnimatorController.PerformIdleAnimation();
             };
+
+            _characterPhysicsController.OnCharacterDied += () =>
+            {
+                _characterAnimatorController.DeactivateAnimator();
+                _characterInputController.Active = false;
+                
+                
+                Timer.Instance.TimerWait(2f, () =>
+                {
+                    _characterAnimatorController.ActivateAnimator();
+                    _characterPhysicsController.ResetPhysics();
+                    _characterInputController.Active = true;
+                });
+            };
+        }
+
+        public void ResetCharacter()
+        {
+            
         }
     }
 }

@@ -22,7 +22,12 @@ namespace Game.CharacterSystem.Controllers
             _animator.SetBool(_isRunning,false);
         }
 
-        public void CloseAnimator()
+        public void ActivateAnimator()
+        {
+            _animator.enabled = true;
+        }
+        
+        public void DeactivateAnimator()
         {
             _animator.enabled = false;
         }

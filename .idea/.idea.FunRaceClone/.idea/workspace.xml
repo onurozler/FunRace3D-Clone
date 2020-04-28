@@ -5,6 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterAnimatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterAnimatorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterInputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Managers/CharacterPhysicsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Managers/CharacterPhysicsManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/SqueezingObstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/RotatingObstacle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/OnurExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Managers/CharacterPhysicsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/IObstaclePiece.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/MovePiece.cs" root0="FORCE_HIGHLIGHTING" />
@@ -29,23 +34,26 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/RotatingPiece.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/d4/d83cea1e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterInputController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Timer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterInputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Managers/CharacterPhysicsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/IBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/IObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/IObstaclePiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/RotatingPiece.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/RotatingObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/SqueezingObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/MovePiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterInputController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/OnurExtensionMethods.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Managers/CharacterPhysicsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterAnimatorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" />
       </list>
@@ -59,6 +67,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.4" value="true" />
@@ -107,6 +116,7 @@
       <workItem from="1588076231543" duration="1105000" />
       <workItem from="1588080273964" duration="8235000" />
       <workItem from="1588089563705" duration="541000" />
+      <workItem from="1588095205001" duration="2379000" />
     </task>
     <servers />
   </component>
@@ -129,9 +139,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588089754605">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588097458471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588089754605" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588097458471" />
   </component>
 </project>
