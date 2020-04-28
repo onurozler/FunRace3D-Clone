@@ -13,8 +13,7 @@ namespace Game.CharacterSystem.Base
         private CharacterPhysicsManager _characterPhysicsManager;
 
         #endregion
-        
-        
+
         #region Controllers
         
         private CharacterMovementController _characterMovementController;

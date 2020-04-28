@@ -6,6 +6,20 @@
     <e p="D:\My Projects\Unity\FunRaceClone" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="3rd Party" t="Include">
+          <e p="DOTween" t="Include">
+            <e p="Modules" t="Include">
+              <e p="DOTweenModuleAudio.cs" t="Include" />
+              <e p="DOTweenModulePhysics.cs" t="Include" />
+              <e p="DOTweenModulePhysics2D.cs" t="Include" />
+              <e p="DOTweenModuleSprite.cs" t="Include" />
+              <e p="DOTweenModuleUI.cs" t="Include" />
+              <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+              <e p="DOTweenModuleUtils.cs" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
             <e p="CharacterSystem" t="Include">
@@ -24,6 +38,21 @@
             <e p="Managers" t="Include">
               <e p="GameManager.cs" t="Include" />
             </e>
+            <e p="ObstacleSystem" t="Include">
+              <e p="Base" t="Include">
+                <e p="ObstacleBase.cs" t="Include" />
+                <e p="RotatingObstacle.cs" t="Include" />
+                <e p="SqueezingObstacle.cs" t="Include" />
+              </e>
+              <e p="ObstaclePiece" t="Include">
+                <e p="IObstaclePiece.cs" t="Include" />
+                <e p="MovePiece.cs" t="Include" />
+                <e p="RotatingPiece.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Utils" t="Include">
+            <e p="Timer.cs" t="Include" />
           </e>
         </e>
       </e>

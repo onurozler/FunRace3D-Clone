@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c21e45d-3324-45e2-aa7a-d8787bd7a41f" name="Default Changelist" comment="" />
+    <list default="true" id="2c21e45d-3324-45e2-aa7a-d8787bd7a41f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Managers/CharacterPhysicsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/SqueezingObstacle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/RotatingObstacle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Managers/CharacterPhysicsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/IObstaclePiece.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/MovePiece.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/RotatingPiece.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/d4/d83cea1e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterInputController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -23,12 +39,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterInputController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Managers/CharacterPhysicsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/IBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/IObstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/IObstaclePiece.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/RotatingPiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/RotatingObstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/SqueezingObstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/MovePiece.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1bALH0AxMhEQU6VtLhnB1xipSrS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -37,6 +62,7 @@
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -79,6 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1588069863520</updated>
       <workItem from="1588069876631" duration="4711000" />
+      <workItem from="1588076231543" duration="1105000" />
+      <workItem from="1588080273964" duration="8235000" />
     </task>
     <servers />
   </component>
@@ -87,4 +115,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
 </project>
