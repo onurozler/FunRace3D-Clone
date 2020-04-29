@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c21e45d-3324-45e2-aa7a-d8787bd7a41f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Platforms/EndPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Platforms/EndPlatform.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

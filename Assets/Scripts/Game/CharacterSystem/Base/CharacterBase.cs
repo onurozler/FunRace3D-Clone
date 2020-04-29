@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Game.CharacterSystem.Controllers;
 using Game.CharacterSystem.Events;
 using Game.CharacterSystem.Managers;
@@ -25,9 +26,15 @@ namespace Game.CharacterSystem.Base
         private CharacterAnimatorController _characterAnimatorController;
         
         #endregion
+
+        private Camera _characterCamera;
+        private Vector3 _cameraOffset;
         
         public void Initialize()
         {
+            _characterCamera = Camera.main;
+            _cameraOffset = _characterCamera.transform.position - transform.position;
+
             var ragdollJoints = GetComponentsInChildren<Rigidbody>().Where(x => x.gameObject != gameObject).ToList();
             var mainRigidbody = GetComponent<Rigidbody>();
             var animator = GetComponent<Animator>();
@@ -43,7 +50,12 @@ namespace Game.CharacterSystem.Base
             _characterInputController.Initialize();
             _characterMovementController.Initialize(transform, 5f);
             _characterPhysicsController.Initialize(_characterPhysicsManager,_characterEventManager);
-            
+
+            SubscribeEvents();
+        }
+
+        private void SubscribeEvents()
+        {
             // Controller Event Subscriptions
             _characterInputController.OnTapPressing += ()=>
             {
@@ -66,9 +78,18 @@ namespace Game.CharacterSystem.Base
             
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, DeactivateControllers);
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED, ResetControllers);
-            
         }
 
+        
+        #region Camera
+
+        private void LateUpdate()
+        {
+            _characterCamera.transform.position = transform.position + _cameraOffset;
+        }
+
+        #endregion
+        
         #region EventMethods
 
         private void DeactivateControllers()
