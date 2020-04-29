@@ -7,6 +7,8 @@ namespace Game.ObstacleSystem.Base
 {
     public class SqueezingObstacle : ObstacleBase
     {
+        public override ObstacleType ObstacleType => ObstacleType.SQUEEZING;
+        
         private Tween _moveTweenRight;
         private Tween _moveTweenLeft;
         
@@ -37,5 +39,6 @@ namespace Game.ObstacleSystem.Base
                     .SetLoops(-1, LoopType.Yoyo);
             });
         }
+
     }
 }

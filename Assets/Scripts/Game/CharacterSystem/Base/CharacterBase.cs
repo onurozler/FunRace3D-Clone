@@ -56,14 +56,14 @@ namespace Game.CharacterSystem.Base
             _characterPhysicsController.OnCharacterDied += () =>
             {
                 _characterAnimatorController.DeactivateAnimator();
-                _characterInputController.Active = false;
+                _characterInputController.DeactivateController();
                 
                 
                 Timer.Instance.TimerWait(2f, () =>
                 {
                     _characterAnimatorController.ActivateAnimator();
                     _characterPhysicsController.ResetPhysics();
-                    _characterInputController.Active = true;
+                    _characterInputController.ActivateController();
                 });
             };
         }

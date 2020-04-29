@@ -6,19 +6,29 @@ namespace Game.CharacterSystem.Controllers
 {
     public class CharacterInputController : MonoBehaviour
     {
-        public bool Active;
+        private bool _active;
         
         public event Action OnTapPressing;
         public event Action OnTapReleasing;
 
         public void Initialize()
         {
-            Active = true;
+            _active = true;
+        }
+
+        public void ActivateController()
+        {
+            _active = true;
+        }
+        
+        public void DeactivateController()
+        {
+            _active = false;
         }
         
         void FixedUpdate()
         {
-            if(!Active)
+            if(!_active)
                 return;
             
             if (Input.GetMouseButton(0))

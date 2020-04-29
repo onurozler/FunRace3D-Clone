@@ -5,8 +5,10 @@ namespace Game.ObstacleSystem.Base
 {
     public class RotatingObstacle : ObstacleBase
     {
-        private Transform _rotationBlock;
+        public override ObstacleType ObstacleType => ObstacleType.ROTATING;
         
+        private Transform _rotationBlock;
+
         private void Awake()
         {
             _base = transform.Find("Base");
@@ -17,5 +19,6 @@ namespace Game.ObstacleSystem.Base
         {
             _rotationBlock.RotateAround(_base.position,Vector3.up, Speed * Time.deltaTime);
         }
+
     }
 }
