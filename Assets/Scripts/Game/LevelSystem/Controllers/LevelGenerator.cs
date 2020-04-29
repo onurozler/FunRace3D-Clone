@@ -34,6 +34,12 @@ namespace Game.LevelSystem.Controllers
             _counter = 0;
         }
 
+        public void Initialize()
+        {
+            _mainCharacter.GetEventManager().SubscribeEvent(CharacterEventType.ON_FINISHED, GenerateLevel);
+            GenerateLevel();
+        }
+        
         private void SelectLevelSettings()
         {
             LevelLength levelLength = GameConfig.GetLevelLength(_counter);
@@ -45,6 +51,7 @@ namespace Game.LevelSystem.Controllers
         public void GenerateLevel()
         {
             SelectLevelSettings();
+            _levelPoolManager.DeactivateWholePool();
             
             // Firstly Generate Spawner Platform and Put Character middle of it.
             var platform = _levelPoolManager.GetAvailablePlatform(PlatformType.CLASSIC);
@@ -87,6 +94,7 @@ namespace Game.LevelSystem.Controllers
             
             _mainCharacter.GetEventManager().InvokeEvent(CharacterEventType.ON_STARTED);
         }
+        
 
         private void UpdateObjectPosition(Transform objTransform, ref Vector3 lastposition,ref float increaseAmount)
         {

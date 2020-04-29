@@ -49,7 +49,7 @@ namespace Game.CharacterSystem.Controllers
             var obstacle = other.gameObject.GetComponent<IObstaclePiece>();
             if (obstacle != null)
             {
-                _characterPhysicsManager.SaveRagdollJoints();
+                //_characterPhysicsManager.SaveRagdollJoints();
                 
                 RagdollActivition(true);
                 

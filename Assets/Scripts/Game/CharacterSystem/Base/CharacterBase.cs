@@ -76,13 +76,14 @@ namespace Game.CharacterSystem.Base
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_STARTED, () =>
             {
                 PlayerHealth = 3;
-                
+                _characterInputController.ActivateController();
             });
             
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_FINISHED, () =>
             {
                 _characterAnimatorController.PerformIdleAnimation();
                 _characterInputController.DeactivateController();
+                _characterEventManager.InvokeEvent(CharacterEventType.ON_STARTED);
             });
             
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, OnDeath);
@@ -125,14 +126,19 @@ namespace Game.CharacterSystem.Base
             {
                 _characterAnimatorController.ActivateAnimator();
                 _characterInputController.ActivateController();
+                
+                
+                _characterPhysicsController.ResetPhysics();
+
+                /*
                 if (PlayerHealth <= 0)
                 {
-                    _characterPhysicsController.ResetPhysics();
+                
                 }
                 else
                 {
                     _characterPhysicsController.RevertPhysics();
-                }
+                }*/
             });
         }
         

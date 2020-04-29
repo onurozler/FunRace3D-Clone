@@ -28,30 +28,44 @@ namespace Game.LevelSystem.PoolingSystem
 
         public PlatformBase GetAvailablePlatform(PlatformType platformType)
         {
-            var platform = _platformBases.FirstOrDefault(x => x.PlatformType == platformType && !x.Active);
+            var platform = _platformBases?.FirstOrDefault(x => x.PlatformType == platformType && !x.Active);
             if (platform == null)
             {
                 platform = Instantiate(_assetManager.GetPlatform(platformType));
-                platform.Activate();
                 platform.transform.SetParent(transform);
                 _platformBases.Add(platform);
             }
             
+            platform.Activate();
             return platform;
         }
 
         public ObstacleBase GetAvailableObstacle(ObstacleType obstacleType)
         {
-            var obstacle = _obstacleBases.FirstOrDefault(x => x.ObstacleType == obstacleType && !x.Active);
+            var obstacle = _obstacleBases?.FirstOrDefault(x => x.ObstacleType == obstacleType && !x.Active);
             if (obstacle == null)
             {
                 obstacle = Instantiate(_assetManager.GetObstacle(obstacleType));
-                obstacle.Activate();
+                obstacle.transform.SetParent(transform);
                 _obstacleBases.Add(obstacle);
             }
             
+            obstacle.Activate();
             return obstacle;
         }
-        
+
+
+        public void DeactivateWholePool()
+        {
+            foreach (var platform in _platformBases)
+            {
+                platform.Deactivate();
+            }
+
+            foreach (var obstacleBase in _obstacleBases)
+            {
+                obstacleBase.Deactivate();
+            }
+        }
     }
 }

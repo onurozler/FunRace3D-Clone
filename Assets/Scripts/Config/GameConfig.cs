@@ -12,7 +12,7 @@ namespace Config
         {
             if (levelindex < 5)
                 return LevelLength.SHORT;
-            if (levelindex > 5 && levelindex < 15)
+            if (levelindex >= 5 && levelindex < 15)
                 return LevelLength.MEDIUM;
             
             return LevelLength.LONG;
@@ -22,7 +22,7 @@ namespace Config
         {
             if (levelindex < 5)
                 return LevelDifficulty.EASY;
-            if (levelindex > 5 && levelindex < 15)
+            if (levelindex >= 5 && levelindex < 15)
                 return LevelDifficulty.MEDIUM;
             
             return LevelDifficulty.HARD;

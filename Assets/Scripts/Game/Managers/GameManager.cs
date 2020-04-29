@@ -1,5 +1,6 @@
 ﻿using System;
 using Game.CharacterSystem.Base;
+using Game.CharacterSystem.Events;
 using Game.LevelSystem.Controllers;
 using Game.View;
 using UnityEngine;
@@ -30,7 +31,7 @@ namespace Game.Managers
         {
             _mainCharacter.Initialize();
             _playerView.Initialize();
-            _levelGenerator.GenerateLevel();
+            _levelGenerator.Initialize();
         }
     }
 }

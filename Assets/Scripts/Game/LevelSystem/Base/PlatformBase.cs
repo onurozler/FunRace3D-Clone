@@ -16,13 +16,13 @@ namespace Game.LevelSystem.Base
         public void Activate()
         {
             Active = true;
-            gameObject.SetActive(Active);
+            gameObject.SetActive(true);
         }
         
         public void Deactivate()
         {
             Active = false;
-            gameObject.SetActive(Active);
+            gameObject.SetActive(false);
         }
     }
 }

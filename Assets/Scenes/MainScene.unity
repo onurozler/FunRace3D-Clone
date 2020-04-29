@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 19922723}
   - component: {fileID: 19922722}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PlayerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,6 +320,7 @@ MonoBehaviour:
   _mainCharacter: {fileID: 628213458}
   _levelPoolManager: {fileID: 536900634}
   _levelGenerator: {fileID: 2026447164}
+  _playerView: {fileID: 847831411}
 --- !u!114 &143374057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,6 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec415588d6258214d8e08d6e71bbc66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerHealth: 0
 --- !u!65 &628213459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1498,6 +1500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelInfo: {fileID: 1816794144}
+  _playerInfo: {fileID: 0}
 --- !u!1 &861170498
 GameObject:
   m_ObjectHideFlags: 0
