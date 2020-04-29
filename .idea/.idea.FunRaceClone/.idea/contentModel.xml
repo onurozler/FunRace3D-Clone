@@ -458,6 +458,7 @@
             <e p="LevelSystem" t="Include">
               <e p="Base" t="Include">
                 <e p="EndPlatform.cs" t="Include" />
+                <e p="Level.cs" t="Include" />
                 <e p="PlatformBase.cs" t="Include" />
               </e>
               <e p="Controllers" t="Include">

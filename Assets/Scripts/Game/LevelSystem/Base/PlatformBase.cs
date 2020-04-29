@@ -4,13 +4,13 @@ namespace Game.LevelSystem.Base
 {
     public enum PlatformType
     {
-        NONE,
+        CLASSIC,
         FINISH
     }
 
     public class PlatformBase : MonoBehaviour
     {
-        public virtual PlatformType PlatformType => PlatformType.NONE;
+        public virtual PlatformType PlatformType => PlatformType.CLASSIC;
         public bool Active;
         
         public virtual void Initialize()

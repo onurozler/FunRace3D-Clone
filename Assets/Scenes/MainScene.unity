@@ -242,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainCharacter: {fileID: 628213458}
   _levelPoolManager: {fileID: 536900634}
+  _levelGenerator: {fileID: 2026447164}
 --- !u!114 &143374057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,6 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbae55af566a6734cbc058b2db5cd67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Active: 0
   Speed: 50
 --- !u!144 &543246602
 CharacterJoint:
@@ -1962,6 +1964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e173b30cff9bf6489149287bcb4cded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Active: 0
   Speed: 10
 --- !u!1 &1586694159
 GameObject:
@@ -2454,6 +2457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b052f58cac526843aa3fc3029be2c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Active: 0
 --- !u!1 &2026447162
 GameObject:
   m_ObjectHideFlags: 0
