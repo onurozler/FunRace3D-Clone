@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c21e45d-3324-45e2-aa7a-d8787bd7a41f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/EndPlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/d4/d83cea1e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Config/GameConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5406A456-CF73-4443-B3D0-2A7D123287F1/31/62a68418/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5406A456-CF73-4443-B3D0-2A7D123287F1/f9/fdabe67d/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -69,10 +72,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Config/GameConfig.cs" />
       </list>
     </option>
   </component>

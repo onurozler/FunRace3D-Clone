@@ -1,4 +1,5 @@
-﻿using Game.CharacterSystem.Base;
+﻿using Config;
+using Game.CharacterSystem.Base;
 using Game.LevelSystem.Base;
 using Game.LevelSystem.PoolingSystem;
 using Game.ObstacleSystem.Base;
@@ -29,7 +30,10 @@ namespace Game.LevelSystem.Controllers
 
         private void SelectLevelSettings()
         {
-            _currentLevel = new Level(_counter++,LevelLength.SHORT,LevelDifficulty.EASY);
+            LevelLength levelLength = GameConfig.GetLevelLength(_counter);
+            LevelDifficulty levelDifficulty = GameConfig.GetLevelDifficulty(_counter);
+            
+            _currentLevel = new Level(_counter++,levelLength,levelDifficulty);
         }
         
         public void GenerateLevel()
@@ -50,27 +54,20 @@ namespace Game.LevelSystem.Controllers
                 int obstacleProbability = Random.Range(0, 100);
                 if (obstacleProbability < (int)_currentLevel.LevelDifficulty && i > 0)
                 {
-                    var obstacle = _levelPoolManager.GetAvailableObstacle(ObstacleType.ROTATING);
+                    int rndObstacle = Random.Range(0, 2);
+                    var obstacle = _levelPoolManager.GetAvailableObstacle((ObstacleType)rndObstacle);
                     obstacle.transform.position = new Vector3(obstacle.transform.position.x,obstacle.transform.position.y,lastPosition.z);
                 }
 
                 platform = _levelPoolManager.GetAvailablePlatform(PlatformType.CLASSIC);
-                platform.transform.position = lastPosition;
-                platform.transform.Translate(0,0,increaseAmount + platform.transform.localScale.z / 2);
+                UpdateObjectPosition(platform.transform,ref lastPosition,ref increaseAmount);
 
-                lastPosition = platform.transform.position;
-                increaseAmount = platform.transform.localScale.z / 2;
-                    
+                // Generate a small platform to make sure obstacles cant collide with finishing
                 if (i >= (int)_currentLevel.LevelLength-1)
                 {
-                    // Generate a small platform to make sure obstacles cant collide with finishing
                     platform = _levelPoolManager.GetAvailablePlatform(PlatformType.CLASSIC);
                     platform.transform.localScale = new Vector3(platform.transform.localScale.x,platform.transform.localScale.y,4);
-                    platform.transform.position = lastPosition;
-                    platform.transform.Translate(0,0,increaseAmount + platform.transform.localScale.z / 2);
-                    
-                    lastPosition = platform.transform.position;
-                    increaseAmount = platform.transform.localScale.z / 2;
+                    UpdateObjectPosition(platform.transform,ref lastPosition,ref increaseAmount);
                 }
                 
             }
@@ -78,10 +75,18 @@ namespace Game.LevelSystem.Controllers
             // Generate Finishing Platform
 
             platform = _levelPoolManager.GetAvailablePlatform(PlatformType.FINISH);
-            platform.transform.position = lastPosition;
-            platform.transform.Translate(0,0,increaseAmount + platform.transform.localScale.z / 2);
+            UpdateObjectPosition(platform.transform,ref lastPosition,ref increaseAmount);
         }
-        
-        
+
+        private void UpdateObjectPosition(Transform objTransform, ref Vector3 lastposition,ref float increaseAmount)
+        {
+            var cachedObjTransform = objTransform.transform;
+            cachedObjTransform.position = lastposition;
+            cachedObjTransform.Translate(0,0,increaseAmount + cachedObjTransform.localScale.z / 2);
+            
+            lastposition = cachedObjTransform.transform.position;
+            increaseAmount = cachedObjTransform.localScale.z / 2;
+        }
     }
+    
 }

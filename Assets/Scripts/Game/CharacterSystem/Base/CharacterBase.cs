@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Config;
 using Game.CharacterSystem.Controllers;
 using Game.CharacterSystem.Events;
 using Game.CharacterSystem.Managers;
@@ -48,7 +49,7 @@ namespace Game.CharacterSystem.Base
             _characterMovementController = gameObject.AddComponent<CharacterMovementController>();
 
             _characterInputController.Initialize();
-            _characterMovementController.Initialize(transform, 5f);
+            _characterMovementController.Initialize(transform,GameConfig.CHARACTER_SPEED);
             _characterPhysicsController.Initialize(_characterPhysicsManager,_characterEventManager);
 
             SubscribeEvents();

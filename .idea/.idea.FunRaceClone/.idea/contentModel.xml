@@ -436,6 +436,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Config" t="Include">
+            <e p="GameConfig.cs" t="Include" />
+          </e>
           <e p="Game" t="Include">
             <e p="CharacterSystem" t="Include">
               <e p="Base" t="Include">
