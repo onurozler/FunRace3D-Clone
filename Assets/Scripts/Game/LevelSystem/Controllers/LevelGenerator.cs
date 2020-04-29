@@ -28,7 +28,7 @@ namespace Game.LevelSystem.Controllers
 
         private void SelectLevelSettings()
         {
-            _currentLevel = new Level(_counter++,LevelLength.SHORT);
+            _currentLevel = new Level(_counter++,LevelLength.SHORT,LevelDifficulty.EASY);
         }
         
         public void GenerateLevel()
@@ -38,7 +38,24 @@ namespace Game.LevelSystem.Controllers
             // Firstly Generate Spawner Platform and Put Character middle of it.
             var spawnerPlatform = _levelPoolManager.GetAvailablePlatform(PlatformType.CLASSIC);
             spawnerPlatform.transform.position = _startingPoint;
-
+            _mainCharacter.transform.position = spawnerPlatform.transform.position;
+            Vector3 lastPosition = _startingPoint * spawnerPlatform.transform.localScale.z;
+            
+            // Generate Other Parts with Obstacles
+            for (int i = 0; i < (int)_currentLevel.LevelLength; i++)
+            {
+                int obstacleProbability = Random.Range(0, 100);
+                if (obstacleProbability < (int)_currentLevel.LevelDifficulty)
+                {
+                    Debug.Log("Test");
+                }
+                else
+                {
+                    
+                }
+            }
+            
+            // Generate Finishing Platform
         }
         
         

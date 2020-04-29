@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Game.CharacterSystem.Events;
 using Game.CharacterSystem.Managers;
+using Game.LevelSystem.Base;
 using Game.ObstacleSystem.ObstaclePiece;
 using UnityEngine;
 
@@ -50,6 +51,15 @@ namespace Game.CharacterSystem.Controllers
                 
                 // Invoke proper event
                 _characterEventManager.InvokeEvent(CharacterEventType.ON_DEATH);
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            var finish = other.GetComponent<EndPlatform>();
+            if (finish != null)
+            {
+                _characterEventManager.InvokeEvent(CharacterEventType.ON_FINISHED);
             }
         }
     }
