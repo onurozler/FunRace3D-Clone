@@ -58,20 +58,26 @@ namespace Game.CharacterSystem.Base
 
             // Character Event Subscriptions
             
-            _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, Die);
-            _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED, Reset);
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_FINISHED, () =>
+            {
+                _characterAnimatorController.PerformIdleAnimation();
+                _characterInputController.DeactivateController();
+            });
+            
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, DeactivateControllers);
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED, ResetControllers);
             
         }
 
         #region EventMethods
 
-        private void Die()
+        private void DeactivateControllers()
         {
             _characterAnimatorController.DeactivateAnimator();
             _characterInputController.DeactivateController();
         }
         
-        private void Reset()
+        private void ResetControllers()
         {
             Timer.Instance.TimerWait(2f, () =>
             {

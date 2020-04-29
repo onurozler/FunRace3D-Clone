@@ -11,11 +11,18 @@ namespace Game.LevelSystem.Base
     public class PlatformBase : MonoBehaviour
     {
         public virtual PlatformType PlatformType => PlatformType.CLASSIC;
-        public bool Active;
+        public bool Active { get; private set; }
         
-        public virtual void Initialize()
+        public void Activate()
         {
             Active = true;
+            gameObject.SetActive(Active);
+        }
+        
+        public void Deactivate()
+        {
+            Active = false;
+            gameObject.SetActive(Active);
         }
     }
 }

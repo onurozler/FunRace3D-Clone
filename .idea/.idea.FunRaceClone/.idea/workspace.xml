@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2c21e45d-3324-45e2-aa7a-d8787bd7a41f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/EndPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/EndPlatform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Platforms/EndPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Platforms/EndPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterInputController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/SqueezingObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/RotatingObstacle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/IObstaclePiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/MovePiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/RotatingPiece.cs" />
@@ -68,15 +70,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Events/CharacterEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Events/CharacterEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Events/CharacterEventManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/EndPlatform.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" />
       </list>
     </option>
   </component>
@@ -160,9 +163,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588166216458">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588171261088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588166216458" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588171261088" />
   </component>
 </project>

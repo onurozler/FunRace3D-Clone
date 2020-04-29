@@ -2,9 +2,9 @@
 {
     public enum LevelLength
     {
-        SHORT = 5,
-        MEDIUM = 10,
-        LONG = 15
+        SHORT = 3,
+        MEDIUM = 7,
+        LONG = 10
     }
     
     public enum LevelDifficulty

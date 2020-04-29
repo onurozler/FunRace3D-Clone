@@ -32,9 +32,11 @@ namespace Game.LevelSystem.PoolingSystem
             if (platform == null)
             {
                 platform = Instantiate(_assetManager.GetPlatform(platformType));
-                platform.Initialize();
+                platform.Activate();
+                platform.transform.SetParent(transform);
                 _platformBases.Add(platform);
             }
+            
             return platform;
         }
 
@@ -44,9 +46,10 @@ namespace Game.LevelSystem.PoolingSystem
             if (obstacle == null)
             {
                 obstacle = Instantiate(_assetManager.GetObstacle(obstacleType));
-                obstacle.Initialize();
+                obstacle.Activate();
                 _obstacleBases.Add(obstacle);
             }
+            
             return obstacle;
         }
         
