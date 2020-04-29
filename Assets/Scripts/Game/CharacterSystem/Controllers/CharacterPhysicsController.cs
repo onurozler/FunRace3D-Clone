@@ -19,6 +19,12 @@ namespace Game.CharacterSystem.Controllers
             RagdollActivition(false);
         }
 
+        public void RevertPhysics()
+        {
+            RagdollActivition(false);
+            _characterPhysicsManager.RevertRagdollJoints();
+        }
+        
         public void ResetPhysics()
         {
             RagdollActivition(false);
@@ -43,6 +49,8 @@ namespace Game.CharacterSystem.Controllers
             var obstacle = other.gameObject.GetComponent<IObstaclePiece>();
             if (obstacle != null)
             {
+                _characterPhysicsManager.SaveRagdollJoints();
+                
                 RagdollActivition(true);
                 
                 // Pushing ragdoll hips to get more realistic result

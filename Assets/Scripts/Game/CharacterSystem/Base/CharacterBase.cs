@@ -85,13 +85,8 @@ namespace Game.CharacterSystem.Base
                 _characterInputController.DeactivateController();
             });
             
-            _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, ()=>
-            {
-                DeactivateControllers();
-                PlayerHealth--;
-            });
-            
-            _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED, ResetControllers);
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, OnDeath);
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED, OnRestart);
         }
 
 
@@ -114,19 +109,30 @@ namespace Game.CharacterSystem.Base
         
         #region EventMethods
 
-        private void DeactivateControllers()
+        private void OnDeath()
         {
             _characterAnimatorController.DeactivateAnimator();
             _characterInputController.DeactivateController();
+            
+            PlayerHealth--;
+
+            _characterEventManager.InvokeEvent(CharacterEventType.ON_RESTARTED);
         }
         
-        private void ResetControllers()
+        private void OnRestart()
         {
             Timer.Instance.TimerWait(2f, () =>
             {
                 _characterAnimatorController.ActivateAnimator();
-                _characterPhysicsController.ResetPhysics();
                 _characterInputController.ActivateController();
+                if (PlayerHealth <= 0)
+                {
+                    _characterPhysicsController.ResetPhysics();
+                }
+                else
+                {
+                    _characterPhysicsController.RevertPhysics();
+                }
             });
         }
         
