@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace Game.ObstacleSystem.Base
+namespace Game.ObstacleSystem.ObstaclePiece
 {
     public interface IObstaclePiece
     {

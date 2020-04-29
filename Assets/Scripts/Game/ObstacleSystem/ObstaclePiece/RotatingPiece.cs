@@ -1,5 +1,4 @@
-﻿using Game.ObstacleSystem.Base;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.ObstacleSystem.ObstaclePiece
 {
@@ -7,7 +6,7 @@ namespace Game.ObstacleSystem.ObstaclePiece
     {
         public void Push(Rigidbody target)
         {
-            target.AddRelativeForce(target.transform.forward * 10000f);
+            target.AddForce(target.transform.forward * 10000f);
         }
     }
 }

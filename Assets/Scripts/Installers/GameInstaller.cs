@@ -1,4 +1,5 @@
 using Game.CharacterSystem.Base;
+using Game.LevelSystem.Managers;
 using Game.LevelSystem.PoolingSystem;
 using UnityEngine;
 using Zenject;
@@ -17,6 +18,8 @@ namespace Installers
         {
             Container.BindInstance(_mainCharacter).AsSingle().NonLazy();
             Container.BindInstance(_levelPoolManager).AsSingle().NonLazy();
+            
+            Container.Bind<AssetManager>().AsSingle().NonLazy();
         }
     }
 }

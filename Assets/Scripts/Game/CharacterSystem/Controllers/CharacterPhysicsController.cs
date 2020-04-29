@@ -1,20 +1,19 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using Game.CharacterSystem.Events;
 using Game.CharacterSystem.Managers;
-using Game.ObstacleSystem.Base;
+using Game.ObstacleSystem.ObstaclePiece;
 using UnityEngine;
-using Utils;
 
 namespace Game.CharacterSystem.Controllers
 {
     public class CharacterPhysicsController : MonoBehaviour
     {
-        public event Action OnCharacterDied;
-
+        private CharacterEventManager _characterEventManager;
         private CharacterPhysicsManager _characterPhysicsManager;
 
-        public void Initialize(CharacterPhysicsManager characterPhysicsManager)
+        public void Initialize(CharacterPhysicsManager characterPhysicsManager, CharacterEventManager characterEventManager)
         {
+            _characterEventManager = characterEventManager;
             _characterPhysicsManager = characterPhysicsManager;
             RagdollActivition(false);
         }
@@ -49,8 +48,8 @@ namespace Game.CharacterSystem.Controllers
                 var hips = _characterPhysicsManager.GetRagdollJoints().FirstOrDefault(x => x.gameObject.name == "Hips");
                 obstacle.Push(hips);
                 
-                // Trigger character death event
-                OnCharacterDied.SafeInvoke();
+                // Invoke proper event
+                _characterEventManager.InvokeEvent(CharacterEventType.ON_DEATH);
             }
         }
     }

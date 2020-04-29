@@ -10,7 +10,6 @@ namespace Game.LevelSystem.Managers
     {
         private const string OBSTACLE_PATH = "Obstacles/";
         private const string PLATFORM_PATH = "Platforms/";
-
         
         private List<ObstacleBase> _obstacles;
         private List<PlatformBase> _platforms;

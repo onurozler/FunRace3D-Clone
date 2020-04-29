@@ -447,6 +447,10 @@
                 <e p="CharacterMovementController.cs" t="Include" />
                 <e p="CharacterPhysicsController.cs" t="Include" />
               </e>
+              <e p="Events" t="Include">
+                <e p="CharacterEvent.cs" t="Include" />
+                <e p="CharacterEventManager.cs" t="Include" />
+              </e>
               <e p="Managers" t="Include">
                 <e p="CharacterPhysicsManager.cs" t="Include" />
               </e>

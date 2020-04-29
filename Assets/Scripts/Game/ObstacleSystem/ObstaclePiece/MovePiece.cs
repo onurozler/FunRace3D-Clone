@@ -1,5 +1,4 @@
-﻿using Game.ObstacleSystem.Base;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.ObstacleSystem.ObstaclePiece
 {
