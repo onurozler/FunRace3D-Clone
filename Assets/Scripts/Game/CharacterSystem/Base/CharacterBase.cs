@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Config;
 using Game.CharacterSystem.Controllers;
 using Game.CharacterSystem.Events;
@@ -11,6 +10,7 @@ namespace Game.CharacterSystem.Base
 {
     public class CharacterBase : MonoBehaviour
     {
+        public int PlayerHealth;
 
         #region Managers
 
@@ -30,9 +30,11 @@ namespace Game.CharacterSystem.Base
 
         private Camera _characterCamera;
         private Vector3 _cameraOffset;
-        
+
         public void Initialize()
         {
+            PlayerHealth = 3;
+            
             _characterCamera = Camera.main;
             _cameraOffset = _characterCamera.transform.position - transform.position;
 
@@ -71,21 +73,40 @@ namespace Game.CharacterSystem.Base
 
             // Character Event Subscriptions
             
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_STARTED, () =>
+            {
+                PlayerHealth = 3;
+                
+            });
+            
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_FINISHED, () =>
             {
                 _characterAnimatorController.PerformIdleAnimation();
                 _characterInputController.DeactivateController();
             });
             
-            _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, DeactivateControllers);
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, ()=>
+            {
+                DeactivateControllers();
+                PlayerHealth--;
+            });
+            
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED, ResetControllers);
         }
 
+
+        public CharacterEventManager GetEventManager()
+        {
+            return _characterEventManager;
+        }
         
         #region Camera
 
         private void LateUpdate()
         {
+            if(_characterCamera == null)
+                return;
+            
             _characterCamera.transform.position = transform.position + _cameraOffset;
         }
 

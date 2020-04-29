@@ -10,12 +10,14 @@ namespace Game.CharacterSystem.Events
         
         public CharacterEventManager()
         {
-            _characterEvents = new List<CharacterEvent>();  
-            
             // I statically added to events but they could be dynamic as well.
-            _characterEvents.Add(new CharacterEvent(CharacterEventType.ON_DEATH));
-            _characterEvents.Add(new CharacterEvent(CharacterEventType.ON_FINISHED));
-            _characterEvents.Add(new CharacterEvent(CharacterEventType.ON_RESTARTED));
+            _characterEvents = new List<CharacterEvent>
+            {
+                new CharacterEvent(CharacterEventType.ON_DEATH),
+                new CharacterEvent(CharacterEventType.ON_FINISHED),
+                new CharacterEvent(CharacterEventType.ON_RESTARTED),
+                new CharacterEvent(CharacterEventType.ON_STARTED)
+            };
         }
 
         public void SubscribeEvent(CharacterEventType characterEventType, Action action)

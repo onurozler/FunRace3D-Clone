@@ -1,15 +1,21 @@
-﻿using Config;
+﻿using System;
+using Config;
 using Game.CharacterSystem.Base;
+using Game.CharacterSystem.Events;
 using Game.LevelSystem.Base;
 using Game.LevelSystem.PoolingSystem;
 using Game.ObstacleSystem.Base;
 using UnityEngine;
+using Utils;
 using Zenject;
+using Random = UnityEngine.Random;
 
 namespace Game.LevelSystem.Controllers
 {
     public class LevelGenerator : MonoBehaviour
     {
+        public Action<Level> OnLevelGenerated;
+        
         private static int _counter;
         
         private Level _currentLevel;
@@ -76,6 +82,10 @@ namespace Game.LevelSystem.Controllers
 
             platform = _levelPoolManager.GetAvailablePlatform(PlatformType.FINISH);
             UpdateObjectPosition(platform.transform,ref lastPosition,ref increaseAmount);
+            
+            OnLevelGenerated.SafeInvoke(_currentLevel);
+            
+            _mainCharacter.GetEventManager().InvokeEvent(CharacterEventType.ON_STARTED);
         }
 
         private void UpdateObjectPosition(Transform objTransform, ref Vector3 lastposition,ref float increaseAmount)

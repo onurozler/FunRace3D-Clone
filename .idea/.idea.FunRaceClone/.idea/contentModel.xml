@@ -489,6 +489,9 @@
                 <e p="RotatingPiece.cs" t="Include" />
               </e>
             </e>
+            <e p="View" t="Include">
+              <e p="PlayerView.cs" t="Include" />
+            </e>
           </e>
           <e p="Installers" t="Include">
             <e p="GameInstaller.cs" t="Include" />

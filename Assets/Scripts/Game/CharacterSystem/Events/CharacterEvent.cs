@@ -8,6 +8,7 @@ namespace Game.CharacterSystem.Events
         ON_DEATH,
         ON_RESTARTED,
         ON_FINISHED,
+        ON_STARTED
     }
     
     public class CharacterEvent
