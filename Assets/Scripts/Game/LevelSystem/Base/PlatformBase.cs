@@ -15,7 +15,7 @@ namespace Game.LevelSystem.Base
         
         public virtual void Initialize()
         {
-            Active = false;
+            Active = true;
         }
     }
 }

@@ -59,10 +59,11 @@ namespace Game.CharacterSystem.Base
             // Character Event Subscriptions
             
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, Die);
-            _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED,Reset);
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED, Reset);
             
         }
 
+        #region EventMethods
 
         private void Die()
         {
@@ -79,5 +80,7 @@ namespace Game.CharacterSystem.Base
                 _characterInputController.ActivateController();
             });
         }
+        
+        #endregion
     }
 }

@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c21e45d-3324-45e2-aa7a-d8787bd7a41f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FunRaceClone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Managers/AssetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Managers/AssetManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/IObstaclePiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/IObstaclePiece.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/MovePiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/MovePiece.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/RotatingPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/RotatingPiece.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +60,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/SqueezingObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/RotatingObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/Base/ObstacleBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/EndPlatform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/IObstaclePiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/MovePiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ObstacleSystem/ObstaclePiece/RotatingPiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Managers/AssetManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Events/CharacerEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Events/CharacterEvents.cs" />
@@ -79,6 +72,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Events/CharacterEventManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Controllers/CharacterPhysicsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CharacterSystem/Base/CharacterBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Controllers/LevelGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/Base/PlatformBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelSystem/PoolingSystem/LevelPoolManager.cs" />
       </list>
     </option>
   </component>
