@@ -21,23 +21,18 @@ namespace Game.CharacterSystem.Base
 
         #region Controllers
         
-        private CharacterMovementController _characterMovementController;
-        private CharacterInputController _characterInputController;
-        private CharacterPhysicsController _characterPhysicsController;
-        private CharacterAnimatorController _characterAnimatorController;
+        protected CharacterMovementController _characterMovementController;
+        protected CharacterPhysicsController _characterPhysicsController;
+        protected CharacterAnimatorController _characterAnimatorController;
         
         #endregion
 
-        private Camera _characterCamera;
-        private Vector3 _cameraOffset;
 
-        public void Initialize()
+
+        public virtual void Initialize()
         {
             PlayerHealth = 3;
             
-            _characterCamera = Camera.main;
-            _cameraOffset = _characterCamera.transform.position - transform.position;
-
             var ragdollJoints = GetComponentsInChildren<Rigidbody>().Where(x => x.gameObject != gameObject).ToList();
             var mainRigidbody = GetComponent<Rigidbody>();
             var animator = GetComponent<Animator>();
@@ -47,10 +42,8 @@ namespace Game.CharacterSystem.Base
             
             _characterAnimatorController = new CharacterAnimatorController(animator);
             _characterPhysicsController = gameObject.AddComponent<CharacterPhysicsController>();
-            _characterInputController = gameObject.AddComponent<CharacterInputController>();
             _characterMovementController = gameObject.AddComponent<CharacterMovementController>();
 
-            _characterInputController.Initialize();
             _characterMovementController.Initialize(transform,GameConfig.CHARACTER_SPEED);
             _characterPhysicsController.Initialize(_characterPhysicsManager,_characterEventManager);
 
@@ -59,18 +52,6 @@ namespace Game.CharacterSystem.Base
 
         private void SubscribeEvents()
         {
-            // Controller Event Subscriptions
-            _characterInputController.OnTapPressing += ()=>
-            {
-                _characterMovementController.Move();
-                _characterAnimatorController.PerformRunAnimation();
-            };
-
-            _characterInputController.OnTapReleasing += () =>
-            {
-                _characterAnimatorController.PerformIdleAnimation();
-            };
-
             // Character Event Subscriptions
 
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_STARTED, OnStarted);
@@ -85,40 +66,23 @@ namespace Game.CharacterSystem.Base
             return _characterEventManager;
         }
         
-        #region Camera
-
-        private void LateUpdate()
-        {
-            if(_characterCamera == null)
-                return;
-            
-            _characterCamera.transform.position = transform.position + _cameraOffset;
-        }
-
-        #endregion
         
         #region EventMethods
 
         private void OnStarted()
         {
             PlayerHealth = 3;
-            _characterInputController.ActivateController();
         }
         
         private void OnFinished()
         {
             _characterAnimatorController.PerformIdleAnimation();
-            _characterInputController.DeactivateController();
-            _characterEventManager.InvokeEvent(CharacterEventType.ON_STARTED);
         }
         
         private void OnDeath()
         {
             _characterAnimatorController.DeactivateAnimator();
-            _characterInputController.DeactivateController();
-            
             PlayerHealth--;
-
             _characterEventManager.InvokeEvent(CharacterEventType.ON_RESTARTED);
         }
         
@@ -127,8 +91,6 @@ namespace Game.CharacterSystem.Base
             Timer.Instance.TimerWait(1f, () =>
             {
                 _characterAnimatorController.ActivateAnimator();
-                _characterInputController.ActivateController();
-                
                 if (PlayerHealth < 1)
                 {
                     _characterPhysicsController.ResetPhysics();

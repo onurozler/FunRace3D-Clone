@@ -1,5 +1,6 @@
 ﻿using System;
 using Config;
+using Game.AISystem.Base;
 using Game.CharacterSystem.Base;
 using Game.CharacterSystem.Events;
 using Game.LevelSystem.Base;
@@ -14,10 +15,11 @@ namespace Game.LevelSystem.Controllers
 {
     public class LevelGenerator : MonoBehaviour
     {
+        [SerializeField] private AICharacter _aiCharacter;
+        
         public Action<Level> OnLevelGenerated;
         
         private static int _counter;
-        
         private Level _currentLevel;
         private CharacterBase _mainCharacter;
         private LevelPoolManager _levelPoolManager;
@@ -57,6 +59,7 @@ namespace Game.LevelSystem.Controllers
             var platform = _levelPoolManager.GetAvailablePlatform(PlatformType.CLASSIC);
             platform.transform.position = _startingPosition;
             _mainCharacter.transform.position = platform.transform.position;
+            _aiCharacter.transform.position = platform.transform.position;
             Vector3 lastPosition = _startingPosition;
             float increaseAmount = platform.transform.localScale.z / 2;
 
@@ -91,6 +94,9 @@ namespace Game.LevelSystem.Controllers
             UpdateObjectPosition(platform.transform,ref lastPosition,ref increaseAmount);
             
             OnLevelGenerated.SafeInvoke(_currentLevel);
+
+            _aiCharacter.IsFinished = false;
+            _aiCharacter.PlayerHealth = 3;
             
             _mainCharacter.GetEventManager().InvokeEvent(CharacterEventType.ON_STARTED);
         }

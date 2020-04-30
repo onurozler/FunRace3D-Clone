@@ -440,9 +440,26 @@
             <e p="GameConfig.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
+            <e p="AISystem" t="Include">
+              <e p="Base" t="Include">
+                <e p="AICharacter.cs" t="Include" />
+              </e>
+              <e p="Controller" t="Include">
+                <e p="AIController.cs" t="Include" />
+              </e>
+              <e p="ObstacleDetection" t="Include">
+                <e p="ObstacleDetector.cs" t="Include" />
+              </e>
+              <e p="State" t="Include">
+                <e p="IAIState.cs" t="Include" />
+                <e p="RunState.cs" t="Include" />
+                <e p="StopState.cs" t="Include" />
+              </e>
+            </e>
             <e p="CharacterSystem" t="Include">
               <e p="Base" t="Include">
                 <e p="CharacterBase.cs" t="Include" />
+                <e p="PlayerCharacter.cs" t="Include" />
               </e>
               <e p="Controllers" t="Include">
                 <e p="CharacterAnimatorController.cs" t="Include" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using Game.AISystem.Base;
 using Game.CharacterSystem.Base;
 using Game.CharacterSystem.Events;
 using Game.LevelSystem.Controllers;
@@ -10,6 +11,9 @@ namespace Game.Managers
 {
     public class GameManager : MonoBehaviour
     {
+        [SerializeField]
+        private AICharacter _aiCharacter;
+        
         private CharacterBase _mainCharacter;
         private PlayerView _playerView;
         private LevelGenerator _levelGenerator;
@@ -32,6 +36,8 @@ namespace Game.Managers
             _mainCharacter.Initialize();
             _playerView.Initialize();
             _levelGenerator.Initialize();
+            
+            _aiCharacter.Initialize();
         }
     }
 }
