@@ -72,20 +72,9 @@ namespace Game.CharacterSystem.Base
             };
 
             // Character Event Subscriptions
-            
-            _characterEventManager.SubscribeEvent(CharacterEventType.ON_STARTED, () =>
-            {
-                PlayerHealth = 3;
-                _characterInputController.ActivateController();
-            });
-            
-            _characterEventManager.SubscribeEvent(CharacterEventType.ON_FINISHED, () =>
-            {
-                _characterAnimatorController.PerformIdleAnimation();
-                _characterInputController.DeactivateController();
-                _characterEventManager.InvokeEvent(CharacterEventType.ON_STARTED);
-            });
-            
+
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_STARTED, OnStarted);
+            _characterEventManager.SubscribeEvent(CharacterEventType.ON_FINISHED, OnFinished);
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_DEATH, OnDeath);
             _characterEventManager.SubscribeEvent(CharacterEventType.ON_RESTARTED, OnRestart);
         }
@@ -110,6 +99,19 @@ namespace Game.CharacterSystem.Base
         
         #region EventMethods
 
+        private void OnStarted()
+        {
+            PlayerHealth = 3;
+            _characterInputController.ActivateController();
+        }
+        
+        private void OnFinished()
+        {
+            _characterAnimatorController.PerformIdleAnimation();
+            _characterInputController.DeactivateController();
+            _characterEventManager.InvokeEvent(CharacterEventType.ON_STARTED);
+        }
+        
         private void OnDeath()
         {
             _characterAnimatorController.DeactivateAnimator();
@@ -127,18 +129,15 @@ namespace Game.CharacterSystem.Base
                 _characterAnimatorController.ActivateAnimator();
                 _characterInputController.ActivateController();
                 
-                
-                _characterPhysicsController.ResetPhysics();
-
-                /*
-                if (PlayerHealth <= 0)
+                if (PlayerHealth < 1)
                 {
-                
+                    _characterPhysicsController.ResetPhysics();
+                    _characterEventManager.InvokeEvent(CharacterEventType.ON_STARTED);
                 }
                 else
                 {
                     _characterPhysicsController.RevertPhysics();
-                }*/
+                }
             });
         }
         

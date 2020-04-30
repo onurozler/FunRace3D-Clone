@@ -9,6 +9,7 @@ namespace Game.CharacterSystem.Controllers
 {
     public class CharacterPhysicsController : MonoBehaviour
     {
+        private bool _IsRagdollActivated;
         private CharacterEventManager _characterEventManager;
         private CharacterPhysicsManager _characterPhysicsManager;
 
@@ -33,6 +34,8 @@ namespace Game.CharacterSystem.Controllers
 
         private void RagdollActivition(bool activate)
         {
+            _IsRagdollActivated = activate;
+            
             _characterPhysicsManager.GetMainRigidbody().isKinematic = activate;
             _characterPhysicsManager.GetMainRigidbody().GetComponent<Collider>().enabled = !activate;
             
@@ -47,9 +50,9 @@ namespace Game.CharacterSystem.Controllers
         private void OnCollisionEnter(Collision other)
         {
             var obstacle = other.gameObject.GetComponent<IObstaclePiece>();
-            if (obstacle != null)
+            if (obstacle != null && !_IsRagdollActivated)
             {
-                //_characterPhysicsManager.SaveRagdollJoints();
+                _characterPhysicsManager.SaveRagdollJoints();
                 
                 RagdollActivition(true);
                 
