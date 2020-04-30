@@ -16,6 +16,9 @@ namespace Game.ObstacleSystem.Base
         
         protected Transform _base;
 
+
+        public abstract void Initialize();
+        
         public void Activate()
         {
             Active = true;

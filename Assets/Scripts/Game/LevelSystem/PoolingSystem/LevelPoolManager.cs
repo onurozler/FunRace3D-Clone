@@ -46,6 +46,7 @@ namespace Game.LevelSystem.PoolingSystem
             if (obstacle == null)
             {
                 obstacle = Instantiate(_assetManager.GetObstacle(obstacleType));
+                obstacle.Initialize();
                 obstacle.transform.SetParent(transform);
                 _obstacleBases.Add(obstacle);
             }
