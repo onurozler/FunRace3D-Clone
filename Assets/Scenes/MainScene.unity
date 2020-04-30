@@ -1500,7 +1500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelInfo: {fileID: 1816794144}
-  _playerInfo: {fileID: 0}
+  _playerInfo: {fileID: 19922722}
 --- !u!1 &861170498
 GameObject:
   m_ObjectHideFlags: 0

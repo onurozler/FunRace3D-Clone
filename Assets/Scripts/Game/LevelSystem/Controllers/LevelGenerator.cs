@@ -59,29 +59,29 @@ namespace Game.LevelSystem.Controllers
             _mainCharacter.transform.position = platform.transform.position;
             Vector3 lastPosition = _startingPosition;
             float increaseAmount = platform.transform.localScale.z / 2;
-            
+
+            int obstacleCount = 0;
             
             // Generate Other Parts with Obstacles
             for (int i = 0; i < (int)_currentLevel.LevelLength; i++)
             {
-                int obstacleProbability = Random.Range(0, 100);
-                if (obstacleProbability < (int)_currentLevel.LevelDifficulty && i > 0)
+                if (i > 0 && obstacleCount< (int)_currentLevel.LevelDifficulty + _currentLevel.LevelIndex)
                 {
+                    obstacleCount++;
                     int rndObstacle = Random.Range(0, 2);
                     var obstacle = _levelPoolManager.GetAvailableObstacle((ObstacleType)rndObstacle);
+                    obstacle.Speed += obstacleCount;
                     obstacle.transform.position = new Vector3(obstacle.transform.position.x,obstacle.transform.position.y,lastPosition.z);
                 }
 
                 platform = _levelPoolManager.GetAvailablePlatform(PlatformType.CLASSIC);
                 UpdateObjectPosition(platform.transform,ref lastPosition,ref increaseAmount);
 
-                // Generate a small platform to make sure obstacles cant collide with finishing
-                if (i >= (int)_currentLevel.LevelLength-1)
-                {
-                    platform = _levelPoolManager.GetAvailablePlatform(PlatformType.CLASSIC);
-                    platform.transform.localScale = new Vector3(platform.transform.localScale.x,platform.transform.localScale.y,4);
-                    UpdateObjectPosition(platform.transform,ref lastPosition,ref increaseAmount);
-                }
+                // Generate a small platform between obstacles to make sure player can pass
+                platform = _levelPoolManager.GetAvailablePlatform(PlatformType.CLASSIC);
+                platform.transform.localScale = new Vector3(platform.transform.localScale.x,platform.transform.localScale.y,3);
+                UpdateObjectPosition(platform.transform,ref lastPosition,ref increaseAmount);
+                
                 
             }
             

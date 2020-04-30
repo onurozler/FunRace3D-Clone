@@ -9,9 +9,9 @@
     
     public enum LevelDifficulty
     {
-        EASY = 30,
-        MEDIUM = 50,
-        HARD = 70
+        EASY = 1, // One Obstacle
+        MEDIUM = 3, // Three
+        HARD = 5  // Five etc..
     }
     
     public class Level
