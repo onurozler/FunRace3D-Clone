@@ -124,7 +124,7 @@ namespace Game.CharacterSystem.Base
         
         private void OnRestart()
         {
-            Timer.Instance.TimerWait(2f, () =>
+            Timer.Instance.TimerWait(1f, () =>
             {
                 _characterAnimatorController.ActivateAnimator();
                 _characterInputController.ActivateController();
